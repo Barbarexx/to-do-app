@@ -1,0 +1,52 @@
+.taskContent{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &:hover{
+        & .label::before{
+            background-color: rgba(234, 89, 89, .1);
+        }
+    }
+}
+
+.label {
+    color: #5A5A5A;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        border: 1px solid #EA5959;
+        margin-right: 20px;
+    }
+}
+
+
+.checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+}
+
+.checkbox:checked {
+    &+.label::before{
+        content: "\002714";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.category{
+    padding: 5px 20px;
+    background: #EA5959;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 12px;
+    cursor: default;
+}
