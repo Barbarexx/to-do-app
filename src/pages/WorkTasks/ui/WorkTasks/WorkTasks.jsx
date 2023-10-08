@@ -1,21 +1,20 @@
 // styles
 import cls from './WorkTasks.module.scss'
-// modules 
+// modules
 import { TasksHeader } from '@/shared/ui/TasksHeader'
 import { Input } from '@/shared/ui/Input'
 import { TasksList } from '@/shared/ui/TasksList'
-import { Task } from '@/widgets/Task'
-
+import { Task } from '@/features/Task'
 
 export const WorkTasks = () => {
-    return (
-        <>
-            <TasksHeader>Work category</TasksHeader>
-            <Input categoryName='Work' />
-            <TasksList>
-                <Task />
-                <Task />
-            </TasksList>
-        </>
-    )
+	return (
+		<>
+			<TasksHeader>Work category</TasksHeader>
+			<Input categoryName="Work" />
+			<TasksList>
+				<Task />
+				<Task />
+			</TasksList>
+		</>
+	)
 }

@@ -1,17 +1,12 @@
-// react
-import { useContext, useState } from 'react';
-// context
-import { TodoContext } from '@/app/providers/context/todo/todoContext';
-// styles 
+// styles
 import cls from './Checkbox.module.scss'
 
 export const Checkbox = ({ label }) => {
-
-    return (
-            <div className={cls.taskContent}>
-                <input onChange={changeHandler} className={cls.checkbox} type="checkbox" />
-                <label className={cls.label}>  {label}  </label>
-                <div className={cls.category}>Uncategorized</div>
-            </div>
-    )
+	return (
+		<div className={cls.taskContent}>
+			<input className={cls.checkbox} type="checkbox" />
+			<label className={cls.label}> {label} </label>
+			<div className={cls.category}>Uncategorized</div>
+		</div>
+	)
 }
